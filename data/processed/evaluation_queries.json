@@ -1,0 +1,82 @@
+
+[
+  {
+    "query": "What programming languages are required for machine learning engineering?",
+    "relevant_job_ids": ["job_002","job_004","job_005","job_006","job_010","job_011","job_016","job_017","job_018","job_024","job_025","job_026","job_027","job_029","job_030"],
+    "where": null
+  },
+  {
+    "query": "Which deep learning frameworks and libraries are requested?",
+    "relevant_job_ids": ["job_006","job_024","job_013","job_016","job_010","job_018","job_001","job_025","job_027","job_030","job_014","job_007","job_003","job_011","job_020"],
+    "where": null
+  },
+  {
+    "query": "What data preprocessing and data manipulation skills are required?",
+    "relevant_job_ids": ["job_002","job_025","job_023","job_017","job_016","job_004","job_027","job_010","job_026"],
+    "where": null
+  },
+  {
+    "query": "What experience with cloud platforms and infrastructure is expected?",
+    "relevant_job_ids": ["job_009","job_018","job_025","job_007","job_021","job_029","job_003","job_004","job_013","job_016","job_024"],
+    "where": null
+  },
+  {
+    "query": "What are the requirements for entry-level machine learning engineers?",
+    "relevant_job_ids": ["job_016","job_011","job_018","job_017","job_020"],
+    "where": {
+       "$and": [
+      {"role_category": "Machine Learning"},
+      {"seniority_level": "Entry level"}
+    ]
+    }
+  },
+  {
+    "query": "What skills are expected from machine learning interns?",
+    "relevant_job_ids": ["job_015","job_027"],
+    "where": {
+       "$and": [
+      {"role_category": "Machine Learning"},
+      {"seniority_level": "Internship"}
+    ]
+    }
+  },
+  {
+    "query": "What natural language processing skills are requested in AI and ML jobs?",
+    "relevant_job_ids": ["job_024","job_013","job_019","job_010","job_017"],
+    "where": null
+  },
+  {
+    "query": "What skills are required for recommendation systems and search ranking?",
+    "relevant_job_ids": ["job_008","job_010","job_026","job_015","job_017","job_005","job_027"],
+    "where": null
+  },
+  {
+    "query": "What software engineering practices are expected from ML engineers?",
+    "relevant_job_ids": ["job_016","job_022","job_021","job_009","job_001","job_014","job_030","job_018"],
+    "where":  {
+      "role_category": { "$in": ["Machine Learning", "AI-related"] }
+    }
+  },
+  {
+    "query": "What model evaluation and validation techniques are mentioned in job descriptions?",
+    "relevant_job_ids": ["job_001","job_021","job_016","job_027","job_015","job_024"],
+    "where": null
+  },
+  {
+    "query": "What qualifications and experience are expected from senior data scientists?",
+    "relevant_job_ids": ["job_004","job_029","job_023"],
+    "where": {
+       "$and": [
+      {"role_category": "Data Scientist"},
+      {"seniority_level": "Mid-Senior level"}
+       ]
+    }
+  },
+  {
+    "query": "What skills are required for generative AI engineering roles?",
+    "relevant_job_ids": ["job_013","job_024","job_016","job_019","job_022","job_003","job_008"],
+    "where": {
+      "role_category": { "$in": ["Machine Learning", "AI-related"] }
+    }
+  }
+]
