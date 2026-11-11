@@ -49,8 +49,8 @@ skills_gap/
 ### 1. Clone the repository
 
 ```bash
-git clone <REPOSITORY_URL>
-cd <REPOSITORY_NAME>
+git clone https://github.com/MN294/skills-gap-analysis.git
+cd skills-gap-analysis
 ```
 
 ### 2. Install dependencies
