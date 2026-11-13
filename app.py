@@ -65,7 +65,17 @@ if st.button("Analyze My Skills", type="primary"):
             except Exception as e:
                 error_message = str(e)
 
-                if "503" in error_message or "UNAVAILABLE" in error_message:
+                if (
+                    "429" in error_message
+                    or "RESOURCE_EXHAUSTED" in error_message
+                    or "quota" in error_message.lower()
+                ):
+                    st.error(
+                        "Gemini API daily quota exceeded. "
+                        "Please try again after the quota resets."
+                    )
+
+                elif "503" in error_message or "UNAVAILABLE" in error_message:
                     st.error(
                         "The AI service is temporarily unavailable. "
                         "Please try again later."
@@ -75,7 +85,6 @@ if st.button("Analyze My Skills", type="primary"):
                     st.error(
                         "Something went wrong. Please try again."
                     )
-
 
 
 # Sidebar

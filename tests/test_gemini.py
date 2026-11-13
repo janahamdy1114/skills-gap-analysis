@@ -1,16 +1,31 @@
+
+from unittest.mock import patch, MagicMock
+
+import pytest
+
 from src.generation.llm_client import generate_response
 
 
-def main():
-    prompt = "Explain what Machine Learning is in two sentences."
+def test_generate_response_success():
+    mock_response = MagicMock()
+    mock_response.text = "Machine Learning is a field of AI."
 
-    answer = generate_response(prompt)
+    with patch(
+        "src.generation.llm_client.client.models.generate_content",
+        return_value=mock_response,
+    ) as mock_generate:
 
-    print("\nGemini Response:")
-    print(answer)
+        answer = generate_response("Explain Machine Learning")
+
+        assert answer == "Machine Learning is a field of AI."
+        mock_generate.assert_called_once()
 
 
-if __name__ == "__main__":
-    main()
+def test_generate_response_empty_prompt():
+    with pytest.raises(ValueError, match="Prompt cannot be empty"):
+        generate_response("")
 
-    
+
+def test_generate_response_whitespace_prompt():
+    with pytest.raises(ValueError, match="Prompt cannot be empty"):
+        generate_response("   ")
